@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplos JS</title>
+    <script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+    <script type="text/javascript" src="js/plugin.js"></script>
+    <script type="text/javascript" src="js/plugindos.js"></script>
+    <link rel="stylesheet" href="css/contador.css" type="text/css">
+    <script>
+        $(function() {
+            $('.valor_medida').contador();
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>
+        <input data-minimo="46" data-maximo="56" data-intervalo="2" data-unidades="cm" class="valor_medida" type="text" value="52" />
+    </li>
+    <li>
+        <input data-minimo= "-5" data-maximo="25" data-intervalo="5" data-unidades="mm" class="valor_medida" type="text" value="10" />
+    </li>
+    <li >
+        <input class="valor_medida" type="text" value="4" />
+    </li>
+    <li >
+        <input class="valor_medida" type="text" data-intervalo="5" value="0" />
+    </li>
+    <li>
+        <input class="valor_medida" type="text" value="0" />
+    </li>
+    <li>
+        <input class="valor_medida" type="text" data-unidades="Kelvin" value="0" />
+    </li>
+</ul>
+
+</body>
+</html>

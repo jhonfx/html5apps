@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Metro DF</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no, initial-scale=1">
+		<link rel="stylesheet" href="js/jquery.mobile-1.0.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/jquery-1.6.1.js"></script>
+		<script src="js/jquery.mobile-1.0.1.js"></script>
+		<script type="text/javascript">
+			function alert() {
+				navigator.notification.alert(
+					'Alerta del metro',
+					alertDismissed,
+					'alert()',
+					'OK'
+				);
+			}
+		</script>
+	</head>
+	<body class="ui-mobile-viewport">
+		<div data-role="page" data-theme="a" data-init="true">
+			<div data-role="header" data-position="inline" data-theme="c" role="banner">
+				<a href="lineas.html" data-role="button" data-icon="back" data-iconpos="notext" data-direction="reverse">Regresar</a>
+				<h1 class="ui-title" role="heading" aria-level="1">
+					<div class="header_logo"></div>
+				</h1>
+			</div>
+			<div data-role="content">				
+				<ul data-role="listview" data-inset="true" data-filter="true" id="lista">
+					<li data-role="list-divider">Linea 1<span class="ui-li-count">Total</span></li>
+					<li>Pantitlan</li>
+					<li>Zaragoza</li>
+					<li>Gomez Farias</li>
+					<li>Boulevard Puerto Aéreo</li>
+					<li>Balbuena</li>
+					<li>Moctezuma</li>
+					<li>San Lazaro</li>
+					<li>Candelaria</li>
+				
+				</ul>
+			</div>
+			<div data-role="footer" data-theme="c">
+				<a href="#" onclick="alert(); return false;">
+					<h2>Metro DF</h2>
+				</a>
+			</div>
+			
+		</div>
+	</body>
+</html>

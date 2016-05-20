@@ -1,0 +1,39 @@
+.header_logo {
+	background-repeat: no-repeat;
+	background-position: -0px -0px;
+	display: inline-block;
+	width: 95px;
+	height: 40px;
+	background: url(../images/metro.png);
+	margin: -1px auto -1px;
+}
+#foo {
+	text-align:center;	
+	min-height: 20px;
+	cursor: pointer;
+}
+#dashboard {
+	width:auto;
+	margin: 5px auto -4px;
+	display:block;
+	clear:both;
+	text-align:center;
+}
+
+.image {
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+	box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 10px;		
+}
+
+#btnback {	
+	width: auto;
+	margin: -9px -9px -7px -9px;
+	display:block;
+	clear:both;
+	text-align:left;
+}

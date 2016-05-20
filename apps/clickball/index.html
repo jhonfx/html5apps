@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minumum-scale=1, maximum-scale=1, user-scalable=no" />
+    <script src="js/simpleFacebookGraph.js"></script>
+    <script src="js/jquery-1.6.1.js"></script>
+    <script src="js/animation.js"></script>
+    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/2.2.0/fabric.min.css">
+    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/2.2.0/fabric.components.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/uikit.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Puzzle</title>
+    <script>
+        fb.ready(function(){
+            if (fb.logged) {
+                html = '<p class="user">'+ fb.user.name + '</p>';
+                html += '<img class="picture" src="'+ fb.user.picture +'"/>';
+                html += '<input id="cerrar" class="cerrar" type="button" value="Salir" onclick="logout()">';
+                document.getElementById("datos").innerHTML = html;
+            }
+        });
+
+        function login() {
+            fb.login(function(){
+                if (fb.logged) {
+                    html = "<p class='user'>" + fb.user.name + "</p>";
+                    html += "<p><img class='picture' src='" + fb.user.picture + "'/></p>";
+                    html += '<input id="cerrar" class="cerrar" type="button" value="Salir" onclick="logout()">';
+                    document.getElementById("datos").innerHTML = html;
+                } else {
+                    alert("No se pudo identificar al usuario");
+                }
+            });
+        };
+
+        function logout(){
+            fb.logout(function(){
+                if (fb.logged) {
+                    console.log("ya nos vamos a desloggear")
+                    html = '<a href="#" onclick="login();">Entrar!</a>';
+                    document.getElementById('datos').innerHTML = html;
+                }
+            })
+        }
+
+        var publish = function() {
+            fb.publish({
+                message: "test de script para publicar cosas en facebook"
+            }, function(published) {
+                if(published) {
+                    console.log("si se pudo publicar!");
+                } else {
+                    console.log("no pudimos, no te identificaste o no diste los permisos :(");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 class="uk-h1">
+            THE BALL
+        </h1>
+        <hr/>
+    </header>
+    <section id="account" class="uk-block">
+        <div id="tiempo" class="tiempo uk-text-large">
+            <div id="time">
+                TIME
+            </div>
+        </div>
+        <div id="datos" class="datos">
+            <a href="#" onclick="login()">LOGIN FB</a>
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="inicia">
+            <button type="button" id="start" class="uk-button uk-width-1-1 uk-margin-small-bottom">START</button>
+        </div>
+        <div class="content" hidden>
+            <div id="ball" class="ball"></div>
+            <div id="numeros" class="numeros"></div>
+        </div>
+    </section>
+    <div>
+        
+    </div>
+</body>
+</html>

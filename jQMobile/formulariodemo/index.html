@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="uft-8">
+		<title>Formulario Demo</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no, initial-scale=1">
+		<link rel="stylesheet" href="js/jquery.mobile-1.0.1.min.css" />
+		<script src="js/jquery-1.6.1.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/jquery.mobile-1.0.1.min.js"></script>		
+		<script>
+			$(document).ready(function(){
+				var formulario = $("#formulario");
+
+				$("#formulario").submit( function() {
+					$.post("enviar.php", formulario.serialize(), function(data){
+						
+					});
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+	
+		<div data-role="page" id="page1">
+			<div data-role="header">
+				Formulario Demo
+			</div>
+			<div data-role="content">
+				<form id="formulario">
+					<div data-role="fieldcontain">
+						<label for="nombre">Nombre:</label>					
+						<input type="text" name="nombre" id="nombre" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="edad">Edad:</label>
+						<input type="text" name="edad" id="edad" />
+					</div>
+					<div data-role="fieldcontain">
+						<button type="submit" value="Enviar">Enviar</button>
+					</div>
+					
+				</form>
+			</div>
+			<div data-role="footer">
+				JQMobile-FormularioDemo
+			</div>
+		</div>
+	</body>
+</html>

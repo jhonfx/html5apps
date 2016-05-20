@@ -1,0 +1,75 @@
+ <!DOCTYPE html> 
+<html> 
+<head>
+   <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+   <title> Barras de Navegacion</title> 
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head>
+<body>
+   <div data-role="page" id="inicio">
+      <div data-role="header" data-position="fixed">
+         <h1>jQuery</h1>
+      </div><!-- /haeder -->
+      <div data-role="content">
+         <p>Navega a través de esta aplicación de DesarrolloWeb.com para conocer algo sobre jQuery</p>
+      </div><!-- /content -->
+
+      <div data-role="footer" data-position="fixed" data-theme="b">
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#jq" data-icon="star" data-transition="slide">jQuery</a></li>
+               <li><a href="#jqui" data-icon="plus" data-transition="slideup"> jQuery UI </a></li>
+               <li><a href="#jqm" data-icon="grid" data-theme="e" data-transition="flip"> jQuery Mobile </a></li>
+            </ul>
+         </div><!-- /navbar -->
+      </div><!-- /footer -->
+   </div><!-- /page -->
+
+   <div data-role="page" id="jq">
+   		<div data-role="header" data-position="fixed">
+   			<h1>jQuery</h1><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">
+   			Inicio</a>
+   		</div><!-- /header -->
+   		<div data-role="content">
+         	<p>Lectura inicial de la web oficial de jQuery:<br>
+         	<span class="ui-btn-active">jQuery is a new kind of JavaScript Library. jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript</span>
+         	</p>
+         </div><!-- /content -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+         	<h3>jQuery</h3>
+      	</div><!-- /footer -->
+   </div><!-- /page -->
+   
+   <div data-role="page" id="jqui">
+   		<div data-role="header" data-position="fixed">
+   			<h1>jQuery UI</h1><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">
+   			Inicio</a>
+   		</div><!-- /header -->
+   		<div data-role="content">
+         	<p>Lectura inicial de la web oficial de jQuery UI:<br>
+         	<span class="ui-btn-active">jQuery UI provides abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets, built on top of the jQuery JavaScript Library, that you can use to build highly interactive web applications</span>
+         	</p>
+         </div><!-- /content -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+         	<h3>jQuery UI</h3>
+      	</div><!-- /footer -->
+   </div><!-- /page --> 
+
+   <div data-role="page" id="jqm">
+      <div data-role="header" data-position="fixed">
+         <h1>jQuery Mobile</h1><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Inicio</a>
+      </div><!-- /haeder -->
+      <div data-role="content">
+         <p>Lectura inicial de la web oficial de jQuery Mobile:</br> <span class="ui-btn-active"> jQuery Mobile: framework para móviles.</span>
+         </p>
+         <img style="width:30%;" src="http://upload.wikimedia.org/wikipedia/commons/5/53/Jquery-mobile-logo.png"/>
+      </div><!-- /content -->
+
+      <div data-role="footer" data-position="fixed" data-theme="c">
+         <h3>jQuery Mobile</h3>
+      </div><!-- /footer -->
+   </div><!-- /page --> 
+</body>
+</html>

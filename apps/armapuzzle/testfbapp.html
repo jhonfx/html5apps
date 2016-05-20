@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>FB Loggin Test</title>
+    <script src="js/simpleFacebookGraph.js"></script>
+    <script>
+        fb.ready(function(){
+            if (fb.logged) {
+                html = "<p>Hola "+ fb.user.name +"</p>";
+                html += '<p><img src="'+ fb.user.picture +'"/></p>';
+                document.getElementById("conectar_facebook").innerHTML = html;
+            }
+        });
+
+        function login() {
+            fb.login(function(){
+               if (fb.logged) {
+                   html = "<p>Hola " + fb.user.name + "</p>";
+                   html += "<p><img src='" + fb.user.picture + "'/></p>";
+                   html += "<p>" + fb.user.first_name + "</p>";
+                   document.getElementById("conectar_facebook").innerHTML = html;
+               } else {
+                   alert("No se pudo identificar al usuario");
+               }
+            });
+        };
+
+        var publish = function() {
+            fb.publish({
+                message: "test de script para publicar cosas en facebook"
+            }, function(published) {
+                if(published) {
+                    console.log("si se pudo publicar!");
+                } else {
+                    console.log("no pudimos, no te identificaste o no diste los permisos :(");
+                }
+            });
+        }
+    </script>
+    <script>
+        function some_function(arg1, arg2, callback) {
+            var my_number = Math.ceil(Math.random() * (arg1 - arg2) + arg2);
+            callback(my_number);
+        };
+
+        some_function(5, 15, function(num){
+            console.log("callback called! " + num);
+        });
+    </script>
+</head>
+<body>
+    <fb:login-button></fb:login-button>
+    <div id="conectar_facebook">
+    </div>
+    <input type="button" value="Publicar" onclick="publish(); return false;">
+    <div id="otros_datos">
+
+    </div>
+    <input type="button" value="Calcular" onclick="some_function();">
+</body>
+</html>

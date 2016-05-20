@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<title>Inputs con jQuery Mobile</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+   		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+   		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	</head>
+<body>
+<div data-role="page">
+   <div data-role="header">
+    	<h1>Input Type</h1>
+   </div>
+   <div data-role="content">    
+      <form action="#" method="get">
+	       <div data-role="fieldcontain">
+	       		<label for="telefono">Tel: </label>
+	       		<input type="tel" name="telefono" id="telefono" max="100" min="1" data-theme="f"/><br>
+	       		<label for="busqueda">Busqueda: </label>
+	       		<input type="search" name="busqueda" id="busqueda" max="100" min="1" data-theme="b"/><br>
+	       		<label for="link">Url: </label>
+	       		<input type="url" name="link" id="link" max="100" min="1" data-theme="c"/><br>
+	       		<label for="numero">Numero: </label>
+	       		<input type="number" name="numero" id="numero" max="100" min="1" data-theme="d"/><br>
+	       		<label for="correo">Email: </label>
+	       		<input type="email" name="correo" id="correo" max="100" min="1" data-theme="a"/><br>
+	       		<label for="fecha">Fecha: </label>
+	       		<input type="datetime" name="fecha" id="fecha" max="100" min="1" data-theme="e"/><br>
+	       </div>
+      </form>
+   </div>
+	<div data-role="footer">
+		<h3>Sliders</h3>
+	</div>
+</div>
+</body>
+</html>

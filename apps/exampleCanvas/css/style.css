@@ -1,0 +1,22 @@
+*{
+	margin: 0;
+}
+body {
+	  font-family: Verdana;
+	  font-size: small;
+}
+
+canvas {
+	  cursor: pointer;
+	  border: 1px solid black;
+	  background: #E7EFAD;
+}
+
+section{
+    background: #C1D72E;
+    overflow: hidden;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+
+}

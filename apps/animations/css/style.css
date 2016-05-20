@@ -1,0 +1,17 @@
+*{
+    border: 0;
+    margin: 0;
+    top: 0;
+    padding: 0;
+}
+
+body {
+    background: #cd853f;
+}
+
+h1 {
+    font-size: 6em;
+    color: white;
+    text-align: center;
+}
+

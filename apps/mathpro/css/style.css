@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=Electrolize);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #696969;
+}
+
+.contenido {
+    width: 50%;
+    border: 1px solid black;
+    margin: 0 auto;
+
+}
+
+.operacion {
+    margin-top: 10px;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+
+.resultado {
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.paragram {
+    border: 1px solid red;
+    margin: 0 auto;
+    margin-top: 5px;
+    text-align: center;
+    width: 60%;
+}
+
+.nums {
+    border: 1px solid blue;
+    height: 30px;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-right: auto;
+    width: 200px;
+}
+
+tr {
+    border: 1px solid blue;
+}
+
+td {
+    border: 1px solid blue;
+}
+
+.btnNumero {
+    width: 100%;
+    margin: 0 auto;
+}

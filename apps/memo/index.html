@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/jquery-1.6.1.js"></script>
+    <script src="js/memorama.js"></script>
+    <script src="js/simpleFacebookGraph.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/memorama.css">
+    <title>MemoStarCraft</title>
+    <script>
+        fb.ready(function(){
+            if (fb.logged) {
+                html = '<p id="user">'+ fb.user.name +'</p>';
+                html += '<p><img src="'+ fb.user.picture +'"/></p>';
+                html += '<input id="cerrar" type="button" value="Salir" onclick="logout()">';
+                document.getElementById("datos").innerHTML = html;
+            }
+        });
+
+        function login() {
+            fb.login(function(){
+                if (fb.logged) {
+                    html = "<p>Hola " + fb.user.name + "</p>";
+                    html += "<p><img src='" + fb.user.picture + "'/></p>";
+                    html += "<p>" + fb.user.first_name + "</p>";
+                    document.getElementById("datos").innerHTML = html;
+                } else {
+                    alert("No se pudo identificar al usuario");
+                }
+            });
+        };
+
+        function logout(){
+            fb.logout(function(){
+                if (fb.logged) {
+                    console.log("ya nos vamos a desloggear")
+                    html = "<p>Adios</p>"
+                    document.getElementById('datos').innerHTML = html;
+                }
+            })
+        }
+
+        var publish = function() {
+            fb.publish({
+                message: "test de script para publicar cosas en facebook"
+            }, function(published) {
+                if(published) {
+                    console.log("si se pudo publicar!");
+                } else {
+                    console.log("no pudimos, no te identificaste o no diste los permisos :(");
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="document.formu.visor.value = 'Intentos: 0';">
+<article class="sec2">
+    <section class="content">
+        <div id="contenedorMemorama" style="border: 1px solid green">
+            <p>div donde debe ir el pinche memorama!</p>
+        </div>
+        <div id="contentInput">
+            <form name="formu">
+                <input name="visor" type="text" class="intentos" size="13" value="Intentos: 0" >
+            </form>
+            <a id="juegoNuevo" class="juegoNuevo" href="javascript:location.reload()">Nuevo Juego</a>
+        </div>
+    </section>
+</article>
+
+</body>
+</html>
